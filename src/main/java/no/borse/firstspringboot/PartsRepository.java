@@ -1,6 +1,4 @@
 package no.borse.firstspringboot;
 
-public class Part {
-
-
+public class PartsRepository {
 }
