@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 * A way for Java to look at its own running code, while it is running.
 *  */
 
+@ActiveProfiles("test")
 @SpringBootApplication
 public class FirstSpringBootApplication {
 
