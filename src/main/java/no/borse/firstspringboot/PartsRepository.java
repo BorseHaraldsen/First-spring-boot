@@ -15,7 +15,7 @@ public class PartsRepository {
 
     private ArrayList<Part> parts = new ArrayList<>();
 
-    public PartsRepository(ArrayList<Part> parts) {
+    public PartsRepository() {
         parts.add(new Part("gear"));
         parts.add(new Part("cog"));
     }
