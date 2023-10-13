@@ -1,6 +1,7 @@
 package no.borse.firstspringboot;
 
-import lombok.extern.flogger.Flogger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ public class PartsRepository {
 
 
     // dummy commit
-
+    private  final Logger log = LoggerFactory.getLogger(PartsRepository.class);
     private ArrayList<Part> parts = new ArrayList<>();
 
     public PartsRepository() {
@@ -30,6 +31,15 @@ public class PartsRepository {
     }
 
     public void addParts(Part part) {
+        if(part.name().equals("fish")) throw new AddPartsException();
         parts.add(part);
+    }
+
+    public void deletePart(Part part) {
+        try{
+            parts.remove(part);
+        }catch (Exception e) {
+            log.error(e.getMessage());
+        }
     }
 }
