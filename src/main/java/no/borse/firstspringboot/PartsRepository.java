@@ -1,5 +1,6 @@
 package no.borse.firstspringboot;
 
+import lombok.extern.flogger.Flogger;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -12,6 +13,9 @@ import java.util.ArrayList;
 *  They all are basically saying Component. */
 @Component
 public class PartsRepository {
+
+
+    // dummy commit
 
     private ArrayList<Part> parts = new ArrayList<>();
 
